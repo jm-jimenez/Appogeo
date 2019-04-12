@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A0514B22260ED7A002D4F83 /* SearchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0514B12260ED7A002D4F83 /* SearchWorker.swift */; };
+		1A0514B42260EF8E002D4F83 /* SearchCoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0514B32260EF8E002D4F83 /* SearchCoreDataStore.swift */; };
+		1A0514B82260F031002D4F83 /* Appogeo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A0514B62260F031002D4F83 /* Appogeo.xcdatamodeld */; };
+		1A0514BB2260F183002D4F83 /* ManagedEmbassy+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0514B92260F183002D4F83 /* ManagedEmbassy+CoreDataClass.swift */; };
+		1A0514BC2260F183002D4F83 /* ManagedEmbassy+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0514BA2260F183002D4F83 /* ManagedEmbassy+CoreDataProperties.swift */; };
+		1A0514BF2260F207002D4F83 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0514BE2260F207002D4F83 /* CoreDataManager.swift */; };
+		1ABA6B25225FB39A00836582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA6B24225FB39A00836582 /* AppDelegate.swift */; };
+		1ABA6B2E225FB39A00836582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ABA6B2D225FB39A00836582 /* Assets.xcassets */; };
+		1ABA6B31225FB39A00836582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABA6B2F225FB39A00836582 /* LaunchScreen.storyboard */; };
+		1ABA6B40225FB54D00836582 /* EmbassyListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA6B3B225FB54D00836582 /* EmbassyListPresenter.swift */; };
+		1ABA6B41225FB54D00836582 /* EmbassyListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA6B3C225FB54D00836582 /* EmbassyListRouter.swift */; };
+		1ABA6B42225FB54D00836582 /* EmbassyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA6B3D225FB54D00836582 /* EmbassyListViewController.swift */; };
+		1ABA6B43225FB54D00836582 /* EmbassyListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA6B3E225FB54D00836582 /* EmbassyListInteractor.swift */; };
+		1ABA6B44225FB54D00836582 /* EmbassyListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABA6B3F225FB54D00836582 /* EmbassyListView.xib */; };
+		1ABA6B49225FB56400836582 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA6B45225FB56400836582 /* BaseInteractor.swift */; };
+		1ABA6B4A225FB56400836582 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA6B46225FB56400836582 /* BaseViewController.swift */; };
+		1ABA6B4B225FB56400836582 /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA6B47225FB56400836582 /* BasePresenter.swift */; };
+		1ABA6B4C225FB56400836582 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA6B48225FB56400836582 /* ViewModel.swift */; };
+		1ABA6B50225FB5B200836582 /* EmbassiesWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA6B4F225FB5B200836582 /* EmbassiesWorker.swift */; };
+		1ABA6B53225FB6DB00836582 /* EmbassyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA6B52225FB6DB00836582 /* EmbassyModel.swift */; };
+		1ABA6B55225FB71300836582 /* EmbassiesAPIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA6B54225FB71300836582 /* EmbassiesAPIStore.swift */; };
+		1ABA6B58225FBB7200836582 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABA6B57225FBB7200836582 /* Alamofire.framework */; };
+		1ABA6B5B225FBDB500836582 /* EmbassyListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA6B5A225FBDB500836582 /* EmbassyListModels.swift */; };
+		904865E22260674600488173 /* EmbassyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904865E02260674600488173 /* EmbassyCell.swift */; };
+		904865E32260674600488173 /* EmbassyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 904865E12260674600488173 /* EmbassyCell.xib */; };
+		904865E6226069F100488173 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904865E5226069F100488173 /* Constants.swift */; };
+		904865F32260877500488173 /* MapDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904865EE2260877500488173 /* MapDetailPresenter.swift */; };
+		904865F42260877500488173 /* MapDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904865EF2260877500488173 /* MapDetailRouter.swift */; };
+		904865F52260877500488173 /* MapDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904865F02260877500488173 /* MapDetailViewController.swift */; };
+		904865F62260877500488173 /* MapDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904865F12260877500488173 /* MapDetailInteractor.swift */; };
+		904865F72260877500488173 /* MapDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 904865F22260877500488173 /* MapDetailView.xib */; };
+		904865FF2260A08400488173 /* MapDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904865FE2260A08400488173 /* MapDetailModels.swift */; };
+		904866012260B58C00488173 /* EmbassyAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904866002260B58C00488173 /* EmbassyAnnotationView.swift */; };
+		904866032260BFFA00488173 /* EmbassiesMemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904866022260BFF900488173 /* EmbassiesMemStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A0514B12260ED7A002D4F83 /* SearchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWorker.swift; sourceTree = "<group>"; };
+		1A0514B32260EF8E002D4F83 /* SearchCoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoreDataStore.swift; sourceTree = "<group>"; };
+		1A0514B72260F031002D4F83 /* Appogeo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Appogeo.xcdatamodel; sourceTree = "<group>"; };
+		1A0514B92260F183002D4F83 /* ManagedEmbassy+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedEmbassy+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1A0514BA2260F183002D4F83 /* ManagedEmbassy+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedEmbassy+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1A0514BE2260F207002D4F83 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		1ABA6B21225FB39A00836582 /* Appogeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appogeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ABA6B24225FB39A00836582 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1ABA6B2D225FB39A00836582 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1ABA6B30225FB39A00836582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1ABA6B32225FB39A00836582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ABA6B3B225FB54D00836582 /* EmbassyListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbassyListPresenter.swift; sourceTree = "<group>"; };
+		1ABA6B3C225FB54D00836582 /* EmbassyListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbassyListRouter.swift; sourceTree = "<group>"; };
+		1ABA6B3D225FB54D00836582 /* EmbassyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbassyListViewController.swift; sourceTree = "<group>"; };
+		1ABA6B3E225FB54D00836582 /* EmbassyListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbassyListInteractor.swift; sourceTree = "<group>"; };
+		1ABA6B3F225FB54D00836582 /* EmbassyListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmbassyListView.xib; sourceTree = "<group>"; };
+		1ABA6B45225FB56400836582 /* BaseInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
+		1ABA6B46225FB56400836582 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		1ABA6B47225FB56400836582 /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		1ABA6B48225FB56400836582 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		1ABA6B4F225FB5B200836582 /* EmbassiesWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbassiesWorker.swift; sourceTree = "<group>"; };
+		1ABA6B52225FB6DB00836582 /* EmbassyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbassyModel.swift; sourceTree = "<group>"; };
+		1ABA6B54225FB71300836582 /* EmbassiesAPIStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbassiesAPIStore.swift; sourceTree = "<group>"; };
+		1ABA6B57225FBB7200836582 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		1ABA6B5A225FBDB500836582 /* EmbassyListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbassyListModels.swift; sourceTree = "<group>"; };
+		904865E02260674600488173 /* EmbassyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbassyCell.swift; sourceTree = "<group>"; };
+		904865E12260674600488173 /* EmbassyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmbassyCell.xib; sourceTree = "<group>"; };
+		904865E5226069F100488173 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		904865EE2260877500488173 /* MapDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailPresenter.swift; sourceTree = "<group>"; };
+		904865EF2260877500488173 /* MapDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailRouter.swift; sourceTree = "<group>"; };
+		904865F02260877500488173 /* MapDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailViewController.swift; sourceTree = "<group>"; };
+		904865F12260877500488173 /* MapDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailInteractor.swift; sourceTree = "<group>"; };
+		904865F22260877500488173 /* MapDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapDetailView.xib; sourceTree = "<group>"; };
+		904865FE2260A08400488173 /* MapDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailModels.swift; sourceTree = "<group>"; };
+		904866002260B58C00488173 /* EmbassyAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbassyAnnotationView.swift; sourceTree = "<group>"; };
+		904866022260BFF900488173 /* EmbassiesMemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbassiesMemStore.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1ABA6B1E225FB39A00836582 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ABA6B58225FBB7200836582 /* Alamofire.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A0514B52260EFD1002D4F83 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1ABA6B2D225FB39A00836582 /* Assets.xcassets */,
+				1ABA6B2F225FB39A00836582 /* LaunchScreen.storyboard */,
+				1A0514B62260F031002D4F83 /* Appogeo.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1A0514BD2260F1F6002D4F83 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				1A0514BE2260F207002D4F83 /* CoreDataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		1ABA6B18225FB39A00836582 = {
+			isa = PBXGroup;
+			children = (
+				1ABA6B23225FB39A00836582 /* Appogeo */,
+				1ABA6B22225FB39A00836582 /* Products */,
+				1ABA6B56225FBB7200836582 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1ABA6B22225FB39A00836582 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1ABA6B21225FB39A00836582 /* Appogeo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1ABA6B23225FB39A00836582 /* Appogeo */ = {
+			isa = PBXGroup;
+			children = (
+				1A0514BD2260F1F6002D4F83 /* Managers */,
+				904865E4226069DA00488173 /* Helpers */,
+				1ABA6B51225FB6CB00836582 /* Models */,
+				1ABA6B4E225FB57F00836582 /* Services */,
+				1ABA6B4D225FB57500836582 /* Workers */,
+				1ABA6B39225FB49000836582 /* Base */,
+				1ABA6B38225FB48A00836582 /* Scenes */,
+				1A0514B52260EFD1002D4F83 /* Resources */,
+				1ABA6B24225FB39A00836582 /* AppDelegate.swift */,
+				1ABA6B32225FB39A00836582 /* Info.plist */,
+			);
+			path = Appogeo;
+			sourceTree = "<group>";
+		};
+		1ABA6B38225FB48A00836582 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				1ABA6B3A225FB4B300836582 /* EmbassyList */,
+				904865ED2260870800488173 /* MapDetail */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		1ABA6B39225FB49000836582 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1ABA6B45225FB56400836582 /* BaseInteractor.swift */,
+				1ABA6B47225FB56400836582 /* BasePresenter.swift */,
+				1ABA6B46225FB56400836582 /* BaseViewController.swift */,
+				1ABA6B48225FB56400836582 /* ViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		1ABA6B3A225FB4B300836582 /* EmbassyList */ = {
+			isa = PBXGroup;
+			children = (
+				904865DF2260672F00488173 /* Cell */,
+				1ABA6B3B225FB54D00836582 /* EmbassyListPresenter.swift */,
+				1ABA6B3C225FB54D00836582 /* EmbassyListRouter.swift */,
+				1ABA6B3D225FB54D00836582 /* EmbassyListViewController.swift */,
+				1ABA6B3E225FB54D00836582 /* EmbassyListInteractor.swift */,
+				1ABA6B3F225FB54D00836582 /* EmbassyListView.xib */,
+				1ABA6B5A225FBDB500836582 /* EmbassyListModels.swift */,
+			);
+			path = EmbassyList;
+			sourceTree = "<group>";
+		};
+		1ABA6B4D225FB57500836582 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				1ABA6B4F225FB5B200836582 /* EmbassiesWorker.swift */,
+				1A0514B12260ED7A002D4F83 /* SearchWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		1ABA6B4E225FB57F00836582 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1ABA6B54225FB71300836582 /* EmbassiesAPIStore.swift */,
+				904866022260BFF900488173 /* EmbassiesMemStore.swift */,
+				1A0514B32260EF8E002D4F83 /* SearchCoreDataStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1ABA6B51225FB6CB00836582 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A0514B92260F183002D4F83 /* ManagedEmbassy+CoreDataClass.swift */,
+				1A0514BA2260F183002D4F83 /* ManagedEmbassy+CoreDataProperties.swift */,
+				1ABA6B52225FB6DB00836582 /* EmbassyModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1ABA6B56225FBB7200836582 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1ABA6B57225FBB7200836582 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		904865DF2260672F00488173 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				904865E02260674600488173 /* EmbassyCell.swift */,
+				904865E12260674600488173 /* EmbassyCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		904865E4226069DA00488173 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				904865E5226069F100488173 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		904865ED2260870800488173 /* MapDetail */ = {
+			isa = PBXGroup;
+			children = (
+				904865EE2260877500488173 /* MapDetailPresenter.swift */,
+				904865EF2260877500488173 /* MapDetailRouter.swift */,
+				904865F02260877500488173 /* MapDetailViewController.swift */,
+				904865F12260877500488173 /* MapDetailInteractor.swift */,
+				904865F22260877500488173 /* MapDetailView.xib */,
+				904865FE2260A08400488173 /* MapDetailModels.swift */,
+				904866002260B58C00488173 /* EmbassyAnnotationView.swift */,
+			);
+			path = MapDetail;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1ABA6B20225FB39A00836582 /* Appogeo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ABA6B35225FB39A00836582 /* Build configuration list for PBXNativeTarget "Appogeo" */;
+			buildPhases = (
+				1ABA6B1D225FB39A00836582 /* Sources */,
+				1ABA6B1E225FB39A00836582 /* Frameworks */,
+				1ABA6B1F225FB39A00836582 /* Resources */,
+				1ABA6B59225FBB7900836582 /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Appogeo;
+			productName = Appogeo;
+			productReference = 1ABA6B21225FB39A00836582 /* Appogeo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1ABA6B19225FB39A00836582 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "José María Jiménez";
+				TargetAttributes = {
+					1ABA6B20225FB39A00836582 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 1ABA6B1C225FB39A00836582 /* Build configuration list for PBXProject "Appogeo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1ABA6B18225FB39A00836582;
+			productRefGroup = 1ABA6B22225FB39A00836582 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1ABA6B20225FB39A00836582 /* Appogeo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1ABA6B1F225FB39A00836582 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				904865E32260674600488173 /* EmbassyCell.xib in Resources */,
+				1ABA6B31225FB39A00836582 /* LaunchScreen.storyboard in Resources */,
+				1ABA6B44225FB54D00836582 /* EmbassyListView.xib in Resources */,
+				1ABA6B2E225FB39A00836582 /* Assets.xcassets in Resources */,
+				904865F72260877500488173 /* MapDetailView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1ABA6B59225FBB7900836582 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1ABA6B1D225FB39A00836582 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ABA6B43225FB54D00836582 /* EmbassyListInteractor.swift in Sources */,
+				1ABA6B53225FB6DB00836582 /* EmbassyModel.swift in Sources */,
+				1A0514B42260EF8E002D4F83 /* SearchCoreDataStore.swift in Sources */,
+				1A0514B82260F031002D4F83 /* Appogeo.xcdatamodeld in Sources */,
+				904866032260BFFA00488173 /* EmbassiesMemStore.swift in Sources */,
+				1ABA6B4C225FB56400836582 /* ViewModel.swift in Sources */,
+				1ABA6B50225FB5B200836582 /* EmbassiesWorker.swift in Sources */,
+				1ABA6B4B225FB56400836582 /* BasePresenter.swift in Sources */,
+				904865E6226069F100488173 /* Constants.swift in Sources */,
+				1ABA6B55225FB71300836582 /* EmbassiesAPIStore.swift in Sources */,
+				1ABA6B5B225FBDB500836582 /* EmbassyListModels.swift in Sources */,
+				1A0514BC2260F183002D4F83 /* ManagedEmbassy+CoreDataProperties.swift in Sources */,
+				1A0514BF2260F207002D4F83 /* CoreDataManager.swift in Sources */,
+				1ABA6B25225FB39A00836582 /* AppDelegate.swift in Sources */,
+				1ABA6B42225FB54D00836582 /* EmbassyListViewController.swift in Sources */,
+				904866012260B58C00488173 /* EmbassyAnnotationView.swift in Sources */,
+				1ABA6B41225FB54D00836582 /* EmbassyListRouter.swift in Sources */,
+				904865E22260674600488173 /* EmbassyCell.swift in Sources */,
+				1A0514BB2260F183002D4F83 /* ManagedEmbassy+CoreDataClass.swift in Sources */,
+				904865F62260877500488173 /* MapDetailInteractor.swift in Sources */,
+				904865FF2260A08400488173 /* MapDetailModels.swift in Sources */,
+				904865F32260877500488173 /* MapDetailPresenter.swift in Sources */,
+				904865F42260877500488173 /* MapDetailRouter.swift in Sources */,
+				904865F52260877500488173 /* MapDetailViewController.swift in Sources */,
+				1A0514B22260ED7A002D4F83 /* SearchWorker.swift in Sources */,
+				1ABA6B40225FB54D00836582 /* EmbassyListPresenter.swift in Sources */,
+				1ABA6B4A225FB56400836582 /* BaseViewController.swift in Sources */,
+				1ABA6B49225FB56400836582 /* BaseInteractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1ABA6B2F225FB39A00836582 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ABA6B30225FB39A00836582 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1ABA6B33225FB39A00836582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1ABA6B34225FB39A00836582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1ABA6B36225FB39A00836582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Appogeo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Test.Appogeo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1ABA6B37225FB39A00836582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Appogeo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Test.Appogeo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1ABA6B1C225FB39A00836582 /* Build configuration list for PBXProject "Appogeo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ABA6B33225FB39A00836582 /* Debug */,
+				1ABA6B34225FB39A00836582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ABA6B35225FB39A00836582 /* Build configuration list for PBXNativeTarget "Appogeo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ABA6B36225FB39A00836582 /* Debug */,
+				1ABA6B37225FB39A00836582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1A0514B62260F031002D4F83 /* Appogeo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1A0514B72260F031002D4F83 /* Appogeo.xcdatamodel */,
+			);
+			currentVersion = 1A0514B72260F031002D4F83 /* Appogeo.xcdatamodel */;
+			path = Appogeo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1ABA6B19225FB39A00836582 /* Project object */;
+}
