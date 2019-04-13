@@ -5,7 +5,7 @@ protocol BaseInteractorProtocol {
     func viewWillAppear()
 }
 
-class BaseInteractor: BaseInteractorProtocol {
+class BaseInteractor: NSObject, BaseInteractorProtocol {
     private weak var basePresenter: BasePresenterProtocol?
     
     func setBasePresenterWith(_ basePresenter: BasePresenterProtocol?) {

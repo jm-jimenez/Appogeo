@@ -38,6 +38,7 @@ class MapDetailViewController: BaseViewController, MapDetailViewControllerProtoc
     
     private func configMapView() {
         mapView.register(EmbassyAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        mapView.showsUserLocation = true
     }
     
     func displayPOIs(viewModel: MapDetail.LoadPOIs.ViewModel) {
