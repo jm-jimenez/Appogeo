@@ -23,7 +23,7 @@ public class ManagedEmbassy: NSManagedObject {
             location = Location.init(latitude: latitude, longitude: longitude)
         }
         let address = Address.init(locality: locality!, street_address: streetAddress!)
-        let embassy = EmbassyModel.init(idUrl: idUrl!, typeUrl: typeUrl!, title: title!, address: address, location: location)
+        let embassy = EmbassyModel.init(idUrl: idUrl!, typeUrl: typeUrl!, title: title!, address: address, location: location, creationDate: date!)
         return embassy
     }
 }

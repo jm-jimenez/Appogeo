@@ -15,8 +15,7 @@ enum SearchHistory {
             struct DisplayedSearch {
                 let icon: UIImage?
                 let title: String
-                let locality: String
-                let address: String
+                let date: String
             }
             var displayedSearchs: [DisplayedSearch]
         }

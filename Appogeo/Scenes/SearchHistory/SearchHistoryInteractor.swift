@@ -17,8 +17,8 @@ class SearchHistoryInteractor: BaseInteractor, SearchHistoryInteractorProtocol {
     }
     
     private func getSearchHistory(request: SearchHistory.GetSearchs.Request) {
-        searchsWorker.fetchSearchs { embassies in
-            print(embassies)
+        searchsWorker.fetchSearchs { [weak self] embassies in
+            self?.presenter?.presentFetchedSearchs(response: SearchHistory.GetSearchs.Response(searchs: embassies))
         }
     }
 }

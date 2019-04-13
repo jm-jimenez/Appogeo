@@ -38,6 +38,8 @@
 		1ADDFD042261BE4700E3EC7F /* SearchHistoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDFD032261BE4700E3EC7F /* SearchHistoryModels.swift */; };
 		1ADDFD132261C45700E3EC7F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDFD112261C45700E3EC7F /* DashboardViewController.swift */; };
 		1ADDFD142261C45700E3EC7F /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ADDFD122261C45700E3EC7F /* DashboardViewController.xib */; };
+		1ADDFD182261CE2E00E3EC7F /* SearchHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDFD162261CE2E00E3EC7F /* SearchHistoryCell.swift */; };
+		1ADDFD192261CE2E00E3EC7F /* SearchHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ADDFD172261CE2E00E3EC7F /* SearchHistoryCell.xib */; };
 		904865E22260674600488173 /* EmbassyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904865E02260674600488173 /* EmbassyCell.swift */; };
 		904865E32260674600488173 /* EmbassyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 904865E12260674600488173 /* EmbassyCell.xib */; };
 		904865E6226069F100488173 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904865E5226069F100488173 /* Constants.swift */; };
@@ -85,6 +87,8 @@
 		1ADDFD032261BE4700E3EC7F /* SearchHistoryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryModels.swift; sourceTree = "<group>"; };
 		1ADDFD112261C45700E3EC7F /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		1ADDFD122261C45700E3EC7F /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
+		1ADDFD162261CE2E00E3EC7F /* SearchHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryCell.swift; sourceTree = "<group>"; };
+		1ADDFD172261CE2E00E3EC7F /* SearchHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHistoryCell.xib; sourceTree = "<group>"; };
 		904865E02260674600488173 /* EmbassyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbassyCell.swift; sourceTree = "<group>"; };
 		904865E12260674600488173 /* EmbassyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmbassyCell.xib; sourceTree = "<group>"; };
 		904865E5226069F100488173 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 		1ADDFCF82261BDE100E3EC7F /* SearchHistory */ = {
 			isa = PBXGroup;
 			children = (
+				1ADDFD152261CE1300E3EC7F /* Cell */,
 				1ADDFCF92261BDFC00E3EC7F /* SearchHistoryPresenter.swift */,
 				1ADDFCFA2261BDFC00E3EC7F /* SearchHistoryRouter.swift */,
 				1ADDFCFB2261BDFC00E3EC7F /* SearchHistoryViewController.swift */,
@@ -255,6 +260,15 @@
 				1ADDFD122261C45700E3EC7F /* DashboardViewController.xib */,
 			);
 			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		1ADDFD152261CE1300E3EC7F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1ADDFD162261CE2E00E3EC7F /* SearchHistoryCell.swift */,
+				1ADDFD172261CE2E00E3EC7F /* SearchHistoryCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		904865DF2260672F00488173 /* Cell */ = {
@@ -353,6 +367,7 @@
 				1ABA6B44225FB54D00836582 /* EmbassyListView.xib in Resources */,
 				1ADDFD022261BDFC00E3EC7F /* SearchHistoryView.xib in Resources */,
 				1ABA6B2E225FB39A00836582 /* Assets.xcassets in Resources */,
+				1ADDFD192261CE2E00E3EC7F /* SearchHistoryCell.xib in Resources */,
 				904865F72260877500488173 /* MapDetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,6 +414,7 @@
 				904865E6226069F100488173 /* Constants.swift in Sources */,
 				1ABA6B55225FB71300836582 /* EmbassiesAPIStore.swift in Sources */,
 				1ABA6B5B225FBDB500836582 /* EmbassyListModels.swift in Sources */,
+				1ADDFD182261CE2E00E3EC7F /* SearchHistoryCell.swift in Sources */,
 				1A0514BC2260F183002D4F83 /* ManagedEmbassy+CoreDataProperties.swift in Sources */,
 				1A0514BF2260F207002D4F83 /* CoreDataManager.swift in Sources */,
 				1ABA6B25225FB39A00836582 /* AppDelegate.swift in Sources */,

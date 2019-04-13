@@ -7,6 +7,7 @@ struct EmbassyModel: Decodable {
     let title: String
     let address: Address
     let location: Location?
+    let creationDate: Date?
     
     
     var type: EmbassyOrConsulate {
@@ -26,6 +27,7 @@ struct EmbassyModel: Decodable {
         case title = "title"
         case address = "address"
         case location = "location"
+        case creationDate = "creationDate"
     }
 }
 

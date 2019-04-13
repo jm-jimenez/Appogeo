@@ -32,8 +32,8 @@ class EmbassyListViewController: BaseViewController, EmbassyListViewControllerPr
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         configTable()
+        super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
