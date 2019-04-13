@@ -1,4 +1,5 @@
 import UIKit
+import CoreLocation
 
 protocol LocationSearchViewControllerProtocol: BaseViewControllerProtocol {
 
@@ -11,6 +12,9 @@ class LocationSearchViewController: BaseViewController, LocationSearchViewContro
     @IBOutlet var longitudeLbl: UILabel!
     @IBOutlet var longitudeTf: UITextField!
     @IBOutlet var continueBtn: UIButton!
+    
+    private var locationManager: CLLocationManager = CLLocationManager()
+    private var isFetchingLocation: Bool = false
     
     var interactor: LocationSearchInteractorProtocol? {
         didSet {
@@ -33,6 +37,7 @@ class LocationSearchViewController: BaseViewController, LocationSearchViewContro
         longitudeLbl.text = "longitude".localized
         continueBtn.setTitle("continue".localized, for: .normal)
         continueBtn.layer.cornerRadius = 10
+        configLocationManager()
         super.viewDidLoad()
     }
     
@@ -40,9 +45,38 @@ class LocationSearchViewController: BaseViewController, LocationSearchViewContro
         super.viewWillAppear(animated)
         router = LocationSearchRouter(navigation: navigationController)
         interactor?.router = router
+        if !isFetchingLocation { locationManager.requestLocation() }
+    }
+    
+    private func configLocationManager() {
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        isFetchingLocation = true
+        locationManager.requestLocation()
     }
     
     @IBAction func continueBtnTap(_ sender: UIButton) {
         interactor?.didTapOnContinue(latitude: latitudeTf.text, longitude: longitudeTf.text)
+    }
+}
+
+extension LocationSearchViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            isFetchingLocation = true
+            locationManager.requestLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        isFetchingLocation = false
+        latitudeTf.text = String(locations[0].coordinate.latitude)
+        longitudeTf.text = String(locations[0].coordinate.longitude)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        isFetchingLocation = false
+        print(error)
     }
 }
