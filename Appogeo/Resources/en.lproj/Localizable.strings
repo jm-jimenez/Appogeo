@@ -6,3 +6,4 @@
 "latitude" = "Latitude";
 "longitude" = "Longitude";
 "continue" = "Continue";
+"gps_error" = "Could't fetch GPS position.";

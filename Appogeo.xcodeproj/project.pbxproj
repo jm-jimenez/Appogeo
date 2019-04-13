@@ -15,6 +15,7 @@
 		1A0514BF2260F207002D4F83 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0514BE2260F207002D4F83 /* CoreDataManager.swift */; };
 		1AA7AE6C22622D3600710B3B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AA7AE6A22622D3600710B3B /* InfoPlist.strings */; };
 		1AA7AE6F22623B3300710B3B /* test.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 1AA7AE6E22623B3300710B3B /* test.gpx */; };
+		1AA7AE7122623D3600710B3B /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AA7AE7022623D3600710B3B /* SVProgressHUD.framework */; };
 		1ABA6B25225FB39A00836582 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA6B24225FB39A00836582 /* AppDelegate.swift */; };
 		1ABA6B2E225FB39A00836582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ABA6B2D225FB39A00836582 /* Assets.xcassets */; };
 		1ABA6B31225FB39A00836582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ABA6B2F225FB39A00836582 /* LaunchScreen.storyboard */; };
@@ -73,6 +74,7 @@
 		1AA7AE6B22622D3600710B3B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1AA7AE6D22622D4000710B3B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1AA7AE6E22623B3300710B3B /* test.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test.gpx; sourceTree = "<group>"; };
+		1AA7AE7022623D3600710B3B /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		1ABA6B21225FB39A00836582 /* Appogeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Appogeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ABA6B24225FB39A00836582 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ABA6B2D225FB39A00836582 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ABA6B58225FBB7200836582 /* Alamofire.framework in Frameworks */,
+				1AA7AE7122623D3600710B3B /* SVProgressHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +263,7 @@
 		1ABA6B56225FBB7200836582 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1AA7AE7022623D3600710B3B /* SVProgressHUD.framework */,
 				1ABA6B57225FBB7200836582 /* Alamofire.framework */,
 			);
 			name = Frameworks;
@@ -429,12 +433,14 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SVProgressHUD.framework",
 			);
 			name = Carthage;
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SVProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

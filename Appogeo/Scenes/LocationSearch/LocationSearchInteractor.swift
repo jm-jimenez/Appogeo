@@ -17,7 +17,11 @@ class LocationSearchInteractor: BaseInteractor, LocationSearchInteractorProtocol
     private var embassiesWorker = EmbassiesWorker(embassiesStore: EmbassiesAPIStore())
     private var searchLocation: LocationSearch.Search.Request?
     private var locationManager: CLLocationManager = CLLocationManager()
-    private var isFetchingLocation: Bool = false
+    private var isFetchingLocation: Bool = false {
+        didSet {
+            presenter?.shouldPresentLoading(isFetchingLocation)
+        }
+    }
     
     override func viewDidLoad() {
         configLocationManager()
@@ -86,6 +90,6 @@ extension LocationSearchInteractor: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         isFetchingLocation = false
-        print(error)
+        presenter?.presentGPSFailed()
     }
 }

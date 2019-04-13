@@ -1,8 +1,11 @@
 import UIKit
 import CoreLocation
+import SVProgressHUD
 
 protocol LocationSearchViewControllerProtocol: BaseViewControllerProtocol {
     func updateTextfields(latitude: String, longitude: String)
+    func shouldDisplayLoading(_ show: Bool)
+    func displayAlertWith(title: String, message: String)
 }
 
 class LocationSearchViewController: BaseViewController, LocationSearchViewControllerProtocol {
@@ -49,6 +52,21 @@ class LocationSearchViewController: BaseViewController, LocationSearchViewContro
     func updateTextfields(latitude: String, longitude: String) {
         latitudeTf.text = latitude
         longitudeTf.text = longitude
+    }
+    
+    func shouldDisplayLoading(_ show: Bool) {
+        if show {
+            SVProgressHUD.show(withStatus: "Fetching GPS")
+        } else {
+            SVProgressHUD.dismiss()
+        }
+    }
+    
+    func displayAlertWith(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func continueBtnTap(_ sender: UIButton) {
