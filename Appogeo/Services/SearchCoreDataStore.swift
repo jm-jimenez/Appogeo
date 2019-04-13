@@ -16,4 +16,16 @@ class SearchCoreDataStore: SearchStoreProtocol {
         }
         
     }
+    
+    func fetchSearchs(completion: SearchStoreFetchAllCompletionHandler) {
+        do {
+            let background = CoreDataManager.shared.persistentContainer.newBackgroundContext()
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ManagedEmbassy")
+            let results = try background.fetch(fetchRequest) as! [ManagedEmbassy]
+            let embassies = results.map { $0.toEmbassy() }
+            completion(.success(result: embassies))
+        } catch {
+            completion(.failure(error: .fetchFailed(error.localizedDescription)))
+        }
+    }
 }

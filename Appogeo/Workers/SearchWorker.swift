@@ -19,11 +19,25 @@ class SearchWorker {
             }
         }
     }
+    
+    func fetchSearchs(completion: @escaping ([EmbassyModel]) -> ()) {
+        searchStore.fetchSearchs { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let result):
+                    completion(result)
+                case .failure:
+                    completion([])
+                }
+            }
+        }
+    }
 }
 
 
 protocol SearchStoreProtocol {
     func saveSearch(searchToSave: EmbassyModel, completion: SearchStoreSaveCompletionHandler)
+    func fetchSearchs(completion: SearchStoreFetchAllCompletionHandler)
 }
 
 enum SearchStoreResult<T> {
@@ -33,6 +47,8 @@ enum SearchStoreResult<T> {
 
 enum SearchStoreError: Error {
     case saveFailed(String)
+    case fetchFailed(String)
 }
 
 typealias SearchStoreSaveCompletionHandler = (SearchStoreResult<EmbassyModel>) -> ()
+typealias SearchStoreFetchAllCompletionHandler = (SearchStoreResult<[EmbassyModel]>) -> ()

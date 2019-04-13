@@ -30,6 +30,12 @@
 		1ABA6B55225FB71300836582 /* EmbassiesAPIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA6B54225FB71300836582 /* EmbassiesAPIStore.swift */; };
 		1ABA6B58225FBB7200836582 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABA6B57225FBB7200836582 /* Alamofire.framework */; };
 		1ABA6B5B225FBDB500836582 /* EmbassyListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA6B5A225FBDB500836582 /* EmbassyListModels.swift */; };
+		1ADDFCFE2261BDFC00E3EC7F /* SearchHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDFCF92261BDFC00E3EC7F /* SearchHistoryPresenter.swift */; };
+		1ADDFCFF2261BDFC00E3EC7F /* SearchHistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDFCFA2261BDFC00E3EC7F /* SearchHistoryRouter.swift */; };
+		1ADDFD002261BDFC00E3EC7F /* SearchHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDFCFB2261BDFC00E3EC7F /* SearchHistoryViewController.swift */; };
+		1ADDFD012261BDFC00E3EC7F /* SearchHistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDFCFC2261BDFC00E3EC7F /* SearchHistoryInteractor.swift */; };
+		1ADDFD022261BDFC00E3EC7F /* SearchHistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ADDFCFD2261BDFC00E3EC7F /* SearchHistoryView.xib */; };
+		1ADDFD042261BE4700E3EC7F /* SearchHistoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDFD032261BE4700E3EC7F /* SearchHistoryModels.swift */; };
 		904865E22260674600488173 /* EmbassyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904865E02260674600488173 /* EmbassyCell.swift */; };
 		904865E32260674600488173 /* EmbassyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 904865E12260674600488173 /* EmbassyCell.xib */; };
 		904865E6226069F100488173 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904865E5226069F100488173 /* Constants.swift */; };
@@ -69,6 +75,12 @@
 		1ABA6B54225FB71300836582 /* EmbassiesAPIStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbassiesAPIStore.swift; sourceTree = "<group>"; };
 		1ABA6B57225FBB7200836582 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		1ABA6B5A225FBDB500836582 /* EmbassyListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbassyListModels.swift; sourceTree = "<group>"; };
+		1ADDFCF92261BDFC00E3EC7F /* SearchHistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryPresenter.swift; sourceTree = "<group>"; };
+		1ADDFCFA2261BDFC00E3EC7F /* SearchHistoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryRouter.swift; sourceTree = "<group>"; };
+		1ADDFCFB2261BDFC00E3EC7F /* SearchHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryViewController.swift; sourceTree = "<group>"; };
+		1ADDFCFC2261BDFC00E3EC7F /* SearchHistoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryInteractor.swift; sourceTree = "<group>"; };
+		1ADDFCFD2261BDFC00E3EC7F /* SearchHistoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHistoryView.xib; sourceTree = "<group>"; };
+		1ADDFD032261BE4700E3EC7F /* SearchHistoryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryModels.swift; sourceTree = "<group>"; };
 		904865E02260674600488173 /* EmbassyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbassyCell.swift; sourceTree = "<group>"; };
 		904865E12260674600488173 /* EmbassyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmbassyCell.xib; sourceTree = "<group>"; };
 		904865E5226069F100488173 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -151,6 +163,7 @@
 			children = (
 				1ABA6B3A225FB4B300836582 /* EmbassyList */,
 				904865ED2260870800488173 /* MapDetail */,
+				1ADDFCF82261BDE100E3EC7F /* SearchHistory */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -215,6 +228,19 @@
 				1ABA6B57225FBB7200836582 /* Alamofire.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1ADDFCF82261BDE100E3EC7F /* SearchHistory */ = {
+			isa = PBXGroup;
+			children = (
+				1ADDFCF92261BDFC00E3EC7F /* SearchHistoryPresenter.swift */,
+				1ADDFCFA2261BDFC00E3EC7F /* SearchHistoryRouter.swift */,
+				1ADDFCFB2261BDFC00E3EC7F /* SearchHistoryViewController.swift */,
+				1ADDFCFC2261BDFC00E3EC7F /* SearchHistoryInteractor.swift */,
+				1ADDFCFD2261BDFC00E3EC7F /* SearchHistoryView.xib */,
+				1ADDFD032261BE4700E3EC7F /* SearchHistoryModels.swift */,
+			);
+			path = SearchHistory;
 			sourceTree = "<group>";
 		};
 		904865DF2260672F00488173 /* Cell */ = {
@@ -310,6 +336,7 @@
 				904865E32260674600488173 /* EmbassyCell.xib in Resources */,
 				1ABA6B31225FB39A00836582 /* LaunchScreen.storyboard in Resources */,
 				1ABA6B44225FB54D00836582 /* EmbassyListView.xib in Resources */,
+				1ADDFD022261BDFC00E3EC7F /* SearchHistoryView.xib in Resources */,
 				1ABA6B2E225FB39A00836582 /* Assets.xcassets in Resources */,
 				904865F72260877500488173 /* MapDetailView.xib in Resources */,
 			);
@@ -348,6 +375,7 @@
 				1ABA6B43225FB54D00836582 /* EmbassyListInteractor.swift in Sources */,
 				1ABA6B53225FB6DB00836582 /* EmbassyModel.swift in Sources */,
 				1A0514B42260EF8E002D4F83 /* SearchCoreDataStore.swift in Sources */,
+				1ADDFD002261BDFC00E3EC7F /* SearchHistoryViewController.swift in Sources */,
 				1A0514B82260F031002D4F83 /* Appogeo.xcdatamodeld in Sources */,
 				904866032260BFFA00488173 /* EmbassiesMemStore.swift in Sources */,
 				1ABA6B4C225FB56400836582 /* ViewModel.swift in Sources */,
@@ -362,13 +390,17 @@
 				1ABA6B42225FB54D00836582 /* EmbassyListViewController.swift in Sources */,
 				904866012260B58C00488173 /* EmbassyAnnotationView.swift in Sources */,
 				1ABA6B41225FB54D00836582 /* EmbassyListRouter.swift in Sources */,
+				1ADDFD042261BE4700E3EC7F /* SearchHistoryModels.swift in Sources */,
+				1ADDFCFE2261BDFC00E3EC7F /* SearchHistoryPresenter.swift in Sources */,
 				904865E22260674600488173 /* EmbassyCell.swift in Sources */,
 				1A0514BB2260F183002D4F83 /* ManagedEmbassy+CoreDataClass.swift in Sources */,
 				904865F62260877500488173 /* MapDetailInteractor.swift in Sources */,
+				1ADDFCFF2261BDFC00E3EC7F /* SearchHistoryRouter.swift in Sources */,
 				904865FF2260A08400488173 /* MapDetailModels.swift in Sources */,
 				904865F32260877500488173 /* MapDetailPresenter.swift in Sources */,
 				904865F42260877500488173 /* MapDetailRouter.swift in Sources */,
 				904865F52260877500488173 /* MapDetailViewController.swift in Sources */,
+				1ADDFD012261BDFC00E3EC7F /* SearchHistoryInteractor.swift in Sources */,
 				1A0514B22260ED7A002D4F83 /* SearchWorker.swift in Sources */,
 				1ABA6B40225FB54D00836582 /* EmbassyListPresenter.swift in Sources */,
 				1ABA6B4A225FB56400836582 /* BaseViewController.swift in Sources */,
