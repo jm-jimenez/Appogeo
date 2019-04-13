@@ -7,12 +7,12 @@ class SearchWorker {
         self.searchStore = searchStore
     }
     
-    func saveSearch() {
-        searchStore.saveSearch { result in
+    func saveSearch(searchToSave: EmbassyModel) {
+        searchStore.saveSearch(searchToSave: searchToSave) { result in
             DispatchQueue.main.async {
                 switch result {
-                case .success:
-                    print("Saved")
+                case .success(let result):
+                    print("\(result.title) saved")
                 case .failure(let error):
                     print(error.localizedDescription)
                 }
@@ -23,7 +23,7 @@ class SearchWorker {
 
 
 protocol SearchStoreProtocol {
-    func saveSearch(completion: SearchStoreSaveCompletionHandler)
+    func saveSearch(searchToSave: EmbassyModel, completion: SearchStoreSaveCompletionHandler)
 }
 
 enum SearchStoreResult<T> {
@@ -35,4 +35,4 @@ enum SearchStoreError: Error {
     case saveFailed(String)
 }
 
-typealias SearchStoreSaveCompletionHandler = (SearchStoreResult<Void>) -> ()
+typealias SearchStoreSaveCompletionHandler = (SearchStoreResult<EmbassyModel>) -> ()

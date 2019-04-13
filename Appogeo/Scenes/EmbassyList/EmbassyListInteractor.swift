@@ -15,6 +15,7 @@ class EmbassyListInteractor: BaseInteractor, EmbassyListInteractorProtocol {
     var router: EmbassyListRouterProtocol?
     
     private var embassiesWorker: EmbassiesWorker = EmbassiesWorker(embassiesStore: EmbassiesAPIStore())
+    private var searchWorker: SearchWorker = SearchWorker(searchStore: SearchCoreDataStore())
     
     override func viewDidLoad() {
         getAllEmbassies(request: EmbassyList.GetEmbassies.Request())
@@ -28,6 +29,8 @@ class EmbassyListInteractor: BaseInteractor, EmbassyListInteractorProtocol {
     }
     
     func showInMapEmbassy(at index: Int) {
-        router?.showInMapEmbassy(embassyModel: embassies![index])
+        let embassy = embassies![index]
+        searchWorker.saveSearch(searchToSave: embassy)
+        router?.showInMapEmbassy(embassyModel: embassy)
     }
 }
