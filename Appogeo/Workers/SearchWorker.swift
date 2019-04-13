@@ -36,8 +36,8 @@ class SearchWorker {
 
 
 protocol SearchStoreProtocol {
-    func saveSearch(searchToSave: EmbassyModel, completion: SearchStoreSaveCompletionHandler)
-    func fetchSearchs(completion: SearchStoreFetchAllCompletionHandler)
+    func saveSearch(searchToSave: EmbassyModel, completion: @escaping SearchStoreSaveCompletionHandler)
+    func fetchSearchs(completion: @escaping SearchStoreFetchAllCompletionHandler)
 }
 
 enum SearchStoreResult<T> {

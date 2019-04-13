@@ -21,6 +21,8 @@ class SearchCoreDataStore: SearchStoreProtocol {
         do {
             let background = CoreDataManager.shared.persistentContainer.newBackgroundContext()
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ManagedEmbassy")
+            let sort = NSSortDescriptor(key: "date", ascending: false)
+            fetchRequest.sortDescriptors = [sort]
             let results = try background.fetch(fetchRequest) as! [ManagedEmbassy]
             let embassies = results.map { $0.toEmbassy() }
             completion(.success(result: embassies))
