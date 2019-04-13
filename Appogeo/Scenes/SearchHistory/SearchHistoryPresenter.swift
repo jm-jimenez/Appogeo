@@ -19,11 +19,13 @@ class SearchHistoryPresenter: BasePresenter, SearchHistoryPresenterProtocol {
             if let date = EmbassyModel.creationDate {
                 if calendar.isDateInToday(date) {
                     let df = DateFormatter()
+                    df.locale = Locale.current
                     df.dateFormat = "HH:mm:ss"
-                    displayDate = "HOY \(df.string(from: date))"
+                    displayDate = "\("today".localized) \(df.string(from: date))"
                 } else {
                     let df = DateFormatter()
-                    df.dateStyle = .medium
+                    df.locale = Locale.current
+                    df.dateStyle = .long
                     df.timeStyle = .medium
                     displayDate = df.string(from: date)
                 }
