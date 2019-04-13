@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-struct EmbassyModel: Decodable {
+struct EmbassyModel: Decodable, POIRepresentable {
     let idUrl: String
     let typeUrl: String
     let title: String
@@ -29,6 +29,18 @@ struct EmbassyModel: Decodable {
         case location = "location"
         case creationDate = "creationDate"
     }
+    
+    var latitude: Double {
+        return location?.latitude ?? 0
+    }
+    
+    var longitude: Double {
+        return location?.longitude ?? 0
+    }
+    
+    var image: UIImage {
+        return type.iconPOI
+    }
 }
 
 struct Address: Decodable {
@@ -46,25 +58,25 @@ enum EmbassyOrConsulate {
     case consulate
     case undefined
     
-    var icon: UIImage? {
+    var icon: UIImage {
         switch self {
         case .embassy:
             return #imageLiteral(resourceName: "embassyIcon")
         case .consulate:
             return #imageLiteral(resourceName: "consulateIcon")
         case .undefined:
-            return nil
+            return UIImage()
         }
     }
     
-    var iconPOI: UIImage? {
+    var iconPOI: UIImage {
         switch self {
         case .embassy:
             return #imageLiteral(resourceName: "embassyPOI")
         case .consulate:
             return #imageLiteral(resourceName: "consulatePOI")
         case .undefined:
-            return nil
+            return UIImage()
         }
     }
 }

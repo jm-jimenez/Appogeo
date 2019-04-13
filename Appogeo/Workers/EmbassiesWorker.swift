@@ -19,10 +19,19 @@ class EmbassiesWorker {
             }
         }
     }
+    
+    func fetchEmbassiesWith(params: LocationSearch.Search.Request, completion: @escaping EmbassiesStoreFetchGeoEmbassies) {
+        embassiesStore.fetchEmbassiesWith(params: params) { result in
+            DispatchQueue.main.async {
+                completion(result)
+            }
+        }
+    }
 }
 
 protocol EmbassiesStoreProtocol {
     func fetchAllEmbassies(completion: @escaping EmbassiesStoreFetchAllEmbassiesCompletionHandler)
+    func fetchEmbassiesWith(params: LocationSearch.Search.Request, completion: @escaping EmbassiesStoreFetchGeoEmbassies)
 }
 
 enum EmbassiesStoreResult<T> {
@@ -32,6 +41,8 @@ enum EmbassiesStoreResult<T> {
 
 enum EmbassiesStoreError: Error {
     case FetchFailed(String)
+    case WrongInput(String)
 }
 
 typealias EmbassiesStoreFetchAllEmbassiesCompletionHandler = (EmbassiesStoreResult<[EmbassyModel]>) -> ()
+typealias EmbassiesStoreFetchGeoEmbassies = (EmbassiesStoreResult<[EmbassyGeoModel]>) -> ()

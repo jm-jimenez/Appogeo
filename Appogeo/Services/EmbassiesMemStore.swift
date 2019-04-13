@@ -12,4 +12,8 @@ class EmbassiesMemStore: EmbassiesStoreProtocol {
         
         completion(.success(result: [embassyModel, embassyModel2]))
     }
+    
+    func fetchEmbassiesWith(params: LocationSearch.Search.Request, completion: @escaping EmbassiesStoreFetchGeoEmbassies) {
+        
+    }
 }

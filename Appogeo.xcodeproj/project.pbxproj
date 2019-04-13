@@ -42,6 +42,12 @@
 		1ADDFD192261CE2E00E3EC7F /* SearchHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ADDFD172261CE2E00E3EC7F /* SearchHistoryCell.xib */; };
 		1ADDFD1C2261D42400E3EC7F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1ADDFD1E2261D42400E3EC7F /* Localizable.strings */; };
 		1ADDFD232261D4AB00E3EC7F /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDFD222261D4AB00E3EC7F /* StringExtensions.swift */; };
+		1ADDFD2A2261EA8F00E3EC7F /* LocationSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDFD252261EA8F00E3EC7F /* LocationSearchPresenter.swift */; };
+		1ADDFD2B2261EA8F00E3EC7F /* LocationSearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDFD262261EA8F00E3EC7F /* LocationSearchRouter.swift */; };
+		1ADDFD2C2261EA8F00E3EC7F /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDFD272261EA8F00E3EC7F /* LocationSearchViewController.swift */; };
+		1ADDFD2D2261EA8F00E3EC7F /* LocationSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDFD282261EA8F00E3EC7F /* LocationSearchInteractor.swift */; };
+		1ADDFD2E2261EA8F00E3EC7F /* LocationSearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ADDFD292261EA8F00E3EC7F /* LocationSearchView.xib */; };
+		1ADDFD302261ECDC00E3EC7F /* LocationSearchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDFD2F2261ECDC00E3EC7F /* LocationSearchModels.swift */; };
 		904865E22260674600488173 /* EmbassyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904865E02260674600488173 /* EmbassyCell.swift */; };
 		904865E32260674600488173 /* EmbassyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 904865E12260674600488173 /* EmbassyCell.xib */; };
 		904865E6226069F100488173 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904865E5226069F100488173 /* Constants.swift */; };
@@ -94,6 +100,12 @@
 		1ADDFD1D2261D42400E3EC7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1ADDFD212261D48900E3EC7F /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1ADDFD222261D4AB00E3EC7F /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		1ADDFD252261EA8F00E3EC7F /* LocationSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchPresenter.swift; sourceTree = "<group>"; };
+		1ADDFD262261EA8F00E3EC7F /* LocationSearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchRouter.swift; sourceTree = "<group>"; };
+		1ADDFD272261EA8F00E3EC7F /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
+		1ADDFD282261EA8F00E3EC7F /* LocationSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchInteractor.swift; sourceTree = "<group>"; };
+		1ADDFD292261EA8F00E3EC7F /* LocationSearchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationSearchView.xib; sourceTree = "<group>"; };
+		1ADDFD2F2261ECDC00E3EC7F /* LocationSearchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchModels.swift; sourceTree = "<group>"; };
 		904865E02260674600488173 /* EmbassyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbassyCell.swift; sourceTree = "<group>"; };
 		904865E12260674600488173 /* EmbassyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmbassyCell.xib; sourceTree = "<group>"; };
 		904865E5226069F100488173 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -179,6 +191,7 @@
 				1ABA6B3A225FB4B300836582 /* EmbassyList */,
 				904865ED2260870800488173 /* MapDetail */,
 				1ADDFCF82261BDE100E3EC7F /* SearchHistory */,
+				1ADDFD242261EA7100E3EC7F /* LocationSearch */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -275,6 +288,19 @@
 				1ADDFD172261CE2E00E3EC7F /* SearchHistoryCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		1ADDFD242261EA7100E3EC7F /* LocationSearch */ = {
+			isa = PBXGroup;
+			children = (
+				1ADDFD252261EA8F00E3EC7F /* LocationSearchPresenter.swift */,
+				1ADDFD262261EA8F00E3EC7F /* LocationSearchRouter.swift */,
+				1ADDFD272261EA8F00E3EC7F /* LocationSearchViewController.swift */,
+				1ADDFD282261EA8F00E3EC7F /* LocationSearchInteractor.swift */,
+				1ADDFD292261EA8F00E3EC7F /* LocationSearchView.xib */,
+				1ADDFD2F2261ECDC00E3EC7F /* LocationSearchModels.swift */,
+			);
+			path = LocationSearch;
 			sourceTree = "<group>";
 		};
 		904865DF2260672F00488173 /* Cell */ = {
@@ -378,6 +404,7 @@
 				1ABA6B2E225FB39A00836582 /* Assets.xcassets in Resources */,
 				1ADDFD192261CE2E00E3EC7F /* SearchHistoryCell.xib in Resources */,
 				904865F72260877500488173 /* MapDetailView.xib in Resources */,
+				1ADDFD2E2261EA8F00E3EC7F /* LocationSearchView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +457,7 @@
 				1ABA6B25225FB39A00836582 /* AppDelegate.swift in Sources */,
 				1ABA6B42225FB54D00836582 /* EmbassyListViewController.swift in Sources */,
 				904866012260B58C00488173 /* EmbassyAnnotationView.swift in Sources */,
+				1ADDFD2D2261EA8F00E3EC7F /* LocationSearchInteractor.swift in Sources */,
 				1ABA6B41225FB54D00836582 /* EmbassyListRouter.swift in Sources */,
 				1ADDFD042261BE4700E3EC7F /* SearchHistoryModels.swift in Sources */,
 				1ADDFCFE2261BDFC00E3EC7F /* SearchHistoryPresenter.swift in Sources */,
@@ -439,13 +467,17 @@
 				1ADDFCFF2261BDFC00E3EC7F /* SearchHistoryRouter.swift in Sources */,
 				904865FF2260A08400488173 /* MapDetailModels.swift in Sources */,
 				904865F32260877500488173 /* MapDetailPresenter.swift in Sources */,
+				1ADDFD2C2261EA8F00E3EC7F /* LocationSearchViewController.swift in Sources */,
 				904865F42260877500488173 /* MapDetailRouter.swift in Sources */,
+				1ADDFD302261ECDC00E3EC7F /* LocationSearchModels.swift in Sources */,
 				904865F52260877500488173 /* MapDetailViewController.swift in Sources */,
 				1ADDFD012261BDFC00E3EC7F /* SearchHistoryInteractor.swift in Sources */,
+				1ADDFD2B2261EA8F00E3EC7F /* LocationSearchRouter.swift in Sources */,
 				1A0514B22260ED7A002D4F83 /* SearchWorker.swift in Sources */,
 				1ABA6B40225FB54D00836582 /* EmbassyListPresenter.swift in Sources */,
 				1ABA6B4A225FB56400836582 /* BaseViewController.swift in Sources */,
 				1ABA6B49225FB56400836582 /* BaseInteractor.swift in Sources */,
+				1ADDFD2A2261EA8F00E3EC7F /* LocationSearchPresenter.swift in Sources */,
 				1ADDFD132261C45700E3EC7F /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,7 +1,8 @@
 import Foundation
 
 protocol MapDetailInteractorProtocol: BaseInteractorProtocol {
-    var itemsToShow: [EmbassyModel]? { get set }
+    var itemsToShow: [POIRepresentable]? { get set }
+    var searchLocation: (lat: Double, lon: Double, dist: Int)? { get set }
 }
 
 class MapDetailInteractor: BaseInteractor, MapDetailInteractorProtocol {
@@ -11,7 +12,8 @@ class MapDetailInteractor: BaseInteractor, MapDetailInteractorProtocol {
         }
     }
     
-    var itemsToShow: [EmbassyModel]?
+    var itemsToShow: [POIRepresentable]?
+    var searchLocation: (lat: Double, lon: Double, dist: Int)?
     
     override func viewDidLoad() {
         getItemsToShow(request: MapDetail.LoadPOIs.Request())
@@ -19,7 +21,7 @@ class MapDetailInteractor: BaseInteractor, MapDetailInteractorProtocol {
     
     private func getItemsToShow(request: MapDetail.LoadPOIs.Request) {
         if let itemsToShow = itemsToShow {
-            presenter?.presentPOIs(response: MapDetail.LoadPOIs.Response(embassies: itemsToShow))
+            presenter?.presentPOIs(response: itemsToShow, searchLocation: searchLocation)
         }
     }
 }
