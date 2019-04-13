@@ -16,7 +16,7 @@ enum EmbassyList {
         }
         
         struct ViewModel {
-            struct DisplayedEmbassy {
+            struct DisplayedEmbassy: Equatable {
                 let icon: UIImage?
                 let title: String
                 let locality: String
