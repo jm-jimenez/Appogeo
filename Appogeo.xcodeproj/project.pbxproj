@@ -36,6 +36,8 @@
 		1ADDFD012261BDFC00E3EC7F /* SearchHistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDFCFC2261BDFC00E3EC7F /* SearchHistoryInteractor.swift */; };
 		1ADDFD022261BDFC00E3EC7F /* SearchHistoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ADDFCFD2261BDFC00E3EC7F /* SearchHistoryView.xib */; };
 		1ADDFD042261BE4700E3EC7F /* SearchHistoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDFD032261BE4700E3EC7F /* SearchHistoryModels.swift */; };
+		1ADDFD132261C45700E3EC7F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADDFD112261C45700E3EC7F /* DashboardViewController.swift */; };
+		1ADDFD142261C45700E3EC7F /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ADDFD122261C45700E3EC7F /* DashboardViewController.xib */; };
 		904865E22260674600488173 /* EmbassyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904865E02260674600488173 /* EmbassyCell.swift */; };
 		904865E32260674600488173 /* EmbassyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 904865E12260674600488173 /* EmbassyCell.xib */; };
 		904865E6226069F100488173 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904865E5226069F100488173 /* Constants.swift */; };
@@ -81,6 +83,8 @@
 		1ADDFCFC2261BDFC00E3EC7F /* SearchHistoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryInteractor.swift; sourceTree = "<group>"; };
 		1ADDFCFD2261BDFC00E3EC7F /* SearchHistoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHistoryView.xib; sourceTree = "<group>"; };
 		1ADDFD032261BE4700E3EC7F /* SearchHistoryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryModels.swift; sourceTree = "<group>"; };
+		1ADDFD112261C45700E3EC7F /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		1ADDFD122261C45700E3EC7F /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
 		904865E02260674600488173 /* EmbassyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmbassyCell.swift; sourceTree = "<group>"; };
 		904865E12260674600488173 /* EmbassyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmbassyCell.xib; sourceTree = "<group>"; };
 		904865E5226069F100488173 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -161,6 +165,7 @@
 		1ABA6B38225FB48A00836582 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1ADDFD052261C35C00E3EC7F /* Dashboard */,
 				1ABA6B3A225FB4B300836582 /* EmbassyList */,
 				904865ED2260870800488173 /* MapDetail */,
 				1ADDFCF82261BDE100E3EC7F /* SearchHistory */,
@@ -241,6 +246,15 @@
 				1ADDFD032261BE4700E3EC7F /* SearchHistoryModels.swift */,
 			);
 			path = SearchHistory;
+			sourceTree = "<group>";
+		};
+		1ADDFD052261C35C00E3EC7F /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				1ADDFD112261C45700E3EC7F /* DashboardViewController.swift */,
+				1ADDFD122261C45700E3EC7F /* DashboardViewController.xib */,
+			);
+			path = Dashboard;
 			sourceTree = "<group>";
 		};
 		904865DF2260672F00488173 /* Cell */ = {
@@ -334,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				904865E32260674600488173 /* EmbassyCell.xib in Resources */,
+				1ADDFD142261C45700E3EC7F /* DashboardViewController.xib in Resources */,
 				1ABA6B31225FB39A00836582 /* LaunchScreen.storyboard in Resources */,
 				1ABA6B44225FB54D00836582 /* EmbassyListView.xib in Resources */,
 				1ADDFD022261BDFC00E3EC7F /* SearchHistoryView.xib in Resources */,
@@ -405,6 +420,7 @@
 				1ABA6B40225FB54D00836582 /* EmbassyListPresenter.swift in Sources */,
 				1ABA6B4A225FB56400836582 /* BaseViewController.swift in Sources */,
 				1ABA6B49225FB56400836582 /* BaseInteractor.swift in Sources */,
+				1ADDFD132261C45700E3EC7F /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
