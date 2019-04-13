@@ -12,7 +12,7 @@ class SearchHistoryInteractor: BaseInteractor, SearchHistoryInteractorProtocol {
     }
     private var searchsWorker: SearchWorker = SearchWorker(searchStore: SearchCoreDataStore())
     
-    override func viewDidLoad() {
+    override func viewWillAppear() {
         getSearchHistory(request: SearchHistory.GetSearchs.Request())
     }
     
