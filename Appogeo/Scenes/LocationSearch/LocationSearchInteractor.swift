@@ -28,7 +28,10 @@ class LocationSearchInteractor: BaseInteractor, LocationSearchInteractorProtocol
     }
     
     override func viewWillAppear() {
-        if !isFetchingLocation { locationManager.requestLocation() }
+        if !isFetchingLocation {
+            isFetchingLocation = true
+            locationManager.requestLocation()
+        }
     }
     
     func didTapOnContinue(latitude: String?, longitude: String?) {
